@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+</head>
+<body>
+<ul>
+    <li th:fragment="tableItem">
+        <a href="#">ldx_user</a>
+        <a th:if="${name}!=null" href="#">remove</a>
+        <a href="#">save</a>
+    </li>
+
+</ul>
+<div>
+    <button>create</button>
+</div>
+</body>
+</html>

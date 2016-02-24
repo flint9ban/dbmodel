@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>数据库生成器</title>
+    <script src="../static/js/jquery-1.10.1.min.js" th:src="@{/js/jquery-1.10.1.min.js}"/>
+    <script lang="javascript">
+        (function(){
+            function initEvent(){
+                $('button').onclick(add);
+            }
+
+            function add(){
+                $('li').last().append("<li><a href=''></a></li>")
+            }
+            $(function(){
+                initEvent();
+            });
+        })();
+    </script>
+</head>
+<body>
+<ul>
+    <li th:each="table : ${tables}">
+        <a href="#">ldx_user</a>
+        <a href="#">remove</a>
+    </li>
+
+</ul>
+<div>
+    <button>create</button>
+</div>
+</body>
+</html>
